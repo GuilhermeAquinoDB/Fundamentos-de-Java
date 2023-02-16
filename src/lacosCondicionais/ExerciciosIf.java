@@ -6,7 +6,7 @@ public class ExerciciosIf {
 	
 	public static void main(String[] args) {
 		
-		int a, b, c, soma;
+		int a, b, c, soma, numero;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -29,10 +29,22 @@ public class ExerciciosIf {
 			System.out.print("A soma de A + B é Menor do que C ");
 		}
 		
-	/*------------------------------------------------------------------------------------------------------*/
+	/*-------------------------------------------------------------------------*/
 		
+		System.out.print("Digite um número: ");
+		numero = sc.nextInt();
 		
-		
+		if(numero % 2 == 0 && numero > 0) {
+			System.out.print("O número " + numero + " é par e positivo!");
+		} else if(numero % 2 == 0 && numero < 0) {
+			System.out.print("O número " + numero + " é par e negativo!");
+		} else if(numero < 0) {
+			System.out.print("O número " + numero + " é impar e negativo!");
+		} else {
+			System.out.print("O número " + numero + " é impar e positivo!");
+		}
+	
+		sc.close();
 	}
 
 }
